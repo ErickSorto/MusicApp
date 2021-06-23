@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MusicApp</string>
+    <string name="search_music">Search Music</string>
+    <string name="welcome">Welcome</string>
+    <string name="choose_music">Choose Music</string>
+    <string name="artist">artist</string>
+    <string name="song_name">song name</string>
+    <string name="music_playing">Music Playing</string>
+    <string name="sample_description">Sample description</string>
+    <string name="description_title">Description</string>
+    <string name="date_sample">Date Sample</string>
+    <string name="artist_sample">artist - sample</string>
+    <string name="song_name_title">Song Name</string>
 </resources>

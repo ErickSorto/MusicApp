@@ -23,14 +23,14 @@
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:background="@color/category_darker"
-                android:layout_marginRight="4dp"
-                android:layout_marginLeft="8dp">
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="8dp">
 
                 <TextView
                     android:id="@+id/song_name_info_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:text="Name Sample"
+                    android:text="@string/song_name_title"
                     android:gravity="center"
                     android:paddingBottom="6dp"
                     android:layout_marginBottom="8dp"
@@ -40,14 +40,14 @@
                     android:id="@+id/song_artist_info_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sample - hello"
+                    android:text="@string/artist_sample"
                     style="@style/SongArtistStyle"/>
                 <TextView
                     android:id="@+id/song_date_info_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/SongArtistStyle"
-                    android:text="Date Sample"/>
+                    android:text="@string/date_sample"/>
 
             </LinearLayout>
             <LinearLayout
@@ -55,8 +55,8 @@
                 android:layout_height="150dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
                 android:background="@color/category_darker">
 
                 <TextView
@@ -64,7 +64,7 @@
                     android:layout_height="48dp"
                     android:paddingBottom="6dp"
                     android:gravity="center"
-                    android:text="Description"
+                    android:text="@string/description_title"
                     android:layout_marginBottom="8dp"
                     android:background="@color/category_lighter"
                     style="@style/SongNameStyle"/>
@@ -77,13 +77,12 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="fewjfiowejfiowjfiwejiofjwioejfwweifjwijfiowejfiowejiofjweiojfiowejfiwiofjioewjfiowejweiojfwioejfweiofjweioweiofjweioweifjweiofjweoifjweiweijfweiojf"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sample_description"
                         android:id="@+id/description_tv"
                         android:scrollbars="vertical"
-                        android:paddingRight="6dp"
-                        style="@style/SongArtistStyle"
-                        android:layout_weight="1"/>
+                        android:paddingEnd="6dp"
+                        style="@style/SongArtistStyle" />
                 </ScrollView>
 
 
@@ -96,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_above="@+id/music_about_layout">
+            >
 
             <ListView
                 android:layout_weight="1"
@@ -104,7 +103,6 @@
                 android:background="@color/dark_background"
                 android:orientation="vertical"
                 android:id="@+id/list"
-                android:layout_above="@id/music_about_layout"
                 android:layout_width="1dp">
 
             </ListView>
@@ -115,7 +113,6 @@
                 android:background="@color/dark_background"
                 android:orientation="vertical"
                 android:id="@+id/list2"
-                android:layout_above="@id/music_about_layout"
                 >
 
             </ListView>
@@ -142,7 +139,7 @@
             android:id="@+id/song_name_playing_tv"
             style="@style/SongPlayingStyle"
             android:background="@color/category_darker"
-            android:text="Music Playing"
+            android:text="@string/music_playing"
             android:textAlignment="center"
             android:textSize="18sp"
             android:layout_height="match_parent"

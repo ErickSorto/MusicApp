@@ -10,7 +10,7 @@
         android:layout_marginRight="8dp"
         style="@style/SongNameStyle"
         android:id="@+id/song_name_tv_2"
-        android:text="hello"
+        android:text="@string/song_name"
         android:background="@color/category_lighter"
         />
 
@@ -21,5 +21,5 @@
         style="@style/SongArtistStyle"
         android:id="@+id/song_artist_tv_2"
         android:background="@color/category_lighter"
-        android:text="chicken"/>
+        android:text="@string/artist"/>
 </LinearLayout>
