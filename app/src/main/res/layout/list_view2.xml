@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    >
+
+    <TextView
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        style="@style/SongNameStyle"
+        android:id="@+id/song_name_tv_2"
+        android:text="hello"
+        android:background="@color/category_lighter"
+        />
+
+    <TextView
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        style="@style/SongArtistStyle"
+        android:id="@+id/song_artist_tv_2"
+        android:background="@color/category_lighter"
+        android:text="chicken"/>
+</LinearLayout>

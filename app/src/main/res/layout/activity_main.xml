@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_background">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_above="@+id/music_about_layout">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+            </LinearLayout>
+            <EditText
+                android:id="@+id/search_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Search Music"
+                android:textColorHint="@color/hint_white"
+                android:textColor="@color/hint_white"
+                android:textAlignment="center"
+                android:layout_above="@id/song_artist_layout"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textStyle="bold"
+                android:textSize="60sp"
+                android:text="Welcome"
+                android:textColor="@color/hint_white"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/song_artist_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_above="@+id/music_about_layout">
+
+                <ListView
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@color/dark_background"
+                    android:orientation="vertical"
+                    android:id="@+id/list_left"
+                    android:layout_above="@id/music_about_layout"
+                    android:layout_width="1dp"
+                    >
+
+                </ListView>
+                <ListView
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@color/dark_background"
+                    android:orientation="vertical"
+                    android:id="@+id/list_right"
+                    android:layout_above="@id/music_about_layout"
+                    >
+
+                </ListView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/music_about_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/play_image_view"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/play_button"
+            android:background="@color/category_lighter"
+            android:padding="16dp"/>
+        <TextView
+            android:id="@+id/song_name_playing_tv"
+            style="@style/SongPlayingStyle"
+            android:background="@color/category_darker"
+            android:text="Choose Music"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/info_song_playing_iv"
+            style="@style/SongPlayingStyle"
+            android:background="@color/category_lighter"
+            android:src="@drawable/details_image"
+            android:padding="9dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_height="match_parent"
+            android:layout_width="60dp"
+            />
+    </LinearLayout>
+
+
+    </RelativeLayout>
+
