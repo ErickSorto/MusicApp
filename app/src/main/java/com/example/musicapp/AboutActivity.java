@@ -17,8 +17,6 @@ public class AboutActivity extends AppCompatActivity {
     private String songName, artistName, date, description;
     private int currentIndex;
     private boolean isListRight;
-
-
     private boolean isPlay = true;
 
     @Override
@@ -50,25 +48,16 @@ public class AboutActivity extends AppCompatActivity {
             description = aboutPage.getDescription();
         }
 
-
-
         if (String.valueOf(name) == "null") {
             display.setText("Choose Music");
         } else {
             display.setText(String.valueOf(name));
         }
 
-
-
-
         ImageView infoImage = (ImageView) findViewById(R.id.info_song_playing_iv);
         playImageView.setImageResource(R.drawable.pause_button);
         infoImage.setImageResource(R.drawable.home);
         infoImage.setPadding(32, 32, 32, 32);
-
-
-        // Set a click listener on that View
-
 
         infoImage.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
@@ -111,7 +100,6 @@ public class AboutActivity extends AppCompatActivity {
             }
         });
 
-
         ListView listView2 = (ListView) findViewById(R.id.list2);
 
         listView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -128,7 +116,6 @@ public class AboutActivity extends AppCompatActivity {
                 isListRight = false;
                 displaySongArtist = song.getName() + " - " + song.getArtist();
 
-
                 display.setText(displaySongArtist);
                 playImageView.setImageResource(R.drawable.pause_button);
                 isPlay = false;
@@ -136,7 +123,6 @@ public class AboutActivity extends AppCompatActivity {
 
             }
         });
-
 
         //Changes to correct image after changing activities
         if (isPlay) {
@@ -153,7 +139,6 @@ public class AboutActivity extends AppCompatActivity {
         listView2.setAdapter(adapter2);
         playOrPause(); //Switches pause and play after click
     }
-
 
     public void playOrPause() {
         ImageView playImageView = (ImageView) findViewById(R.id.play_image_view);
@@ -182,7 +167,6 @@ public class AboutActivity extends AppCompatActivity {
         aboutPagesArray.add(new InfoPage("Daydreamer", "AURORA", "June 7, 2019", "\"Daydreamer\" is the fourth track on the album A Different Kind of Human - Step 2. It was written by AURORA and Peter Wade and produced by AURORA, Askjell, Tim Bran, and Roy Kerr."));
         aboutPagesArray.add(new InfoPage("Un_gravitify", "Cashell", "January 17, 2008", "\"Un-Gravitify\" is the main theme as well as Team Heroes' theme in Sonic Riders: Zero Gravity. It was composed by Kenichi Tokoi, written by Runblebee and performed by Cashell."));
         aboutPagesArray.add(new InfoPage("Wind", "Akeboshi", "August 8, 2002", "Wind (ワインド, Waindo), performed by Akeboshi (明星), was the first ending song in the Japanese version of Part I of the Naruto series. It was replaced by Harmonia in Episode 26."));
-
 
         return aboutPagesArray;
     }

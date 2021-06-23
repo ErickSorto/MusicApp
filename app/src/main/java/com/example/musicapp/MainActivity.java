@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private boolean isChosen = false; // allows user to click info page after choosing song
     private int currentIndex;
     private boolean isListRight;
-    private boolean isInfoDisplayed = false;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         ImageView infoImage = (ImageView) findViewById(R.id.info_song_playing_iv);
         TextView displaySongTextView = (TextView) findViewById(R.id.song_name_playing_tv);
         ImageView playImageView = (ImageView) findViewById(R.id.play_image_view);
-
 
         Bundle bn = getIntent().getExtras();
 
@@ -44,13 +41,11 @@ public class MainActivity extends AppCompatActivity {
             isListRight = bn.getBoolean("isListRight");
         }
 
-
         if (isPlay) { //sets image to play or pause after loading activity
             playImageView.setImageResource(R.drawable.play_button);
         } else {
             playImageView.setImageResource(R.drawable.pause_button);
         }
-
 
         ListView listView = (ListView) findViewById(R.id.list_left);
 
@@ -69,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         ListView listView2 = (ListView) findViewById(R.id.list_right);
 
         listView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -87,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 currentIndex = index;
             }
         });
-
 
         // Set a click listener on that View
         infoImage.setOnClickListener(new View.OnClickListener() {
@@ -109,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
 
         SongAdapter adapter = new SongAdapter(this, arrayOfSongs(1));
         listView.setAdapter(adapter);
@@ -134,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
                 isPlay = !isPlay;
             }
         });
-
     }
 
     public ArrayList<Song> arrayOfSongs(int arrayListNum) {
